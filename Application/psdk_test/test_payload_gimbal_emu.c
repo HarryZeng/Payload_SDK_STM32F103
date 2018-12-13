@@ -28,6 +28,7 @@
 #include <psdk.h>
 #include <psdk_cmdset_define/psdk_cmdset_gimbal.h>
 #include "test_payload_gimbal_emu.h"
+#include "led_button_switch.h"
 
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
@@ -35,7 +36,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 //gimbal mode
-static uint8_t gimbalMode = PSDK_GIMBAL_GIMBAL_MODE_FPV;
+static uint8_t gimbalMode = PSDK_GIMBAL_GIMBAL_MODE_YAW_FOLLOW;
 
 //reach yaw, roll, pitch axis limit angle
 static uint8_t isYawLimit = 0;
@@ -73,7 +74,7 @@ static const int16_t yawMinLimit = -900;
  */
 void GimbalEmu_GetGimbalParam(const T_PsdkGimbalGetGimbalStateReq *req, T_PsdkGimbalGetGimbalStateAck *ack)
 {
-//    PSDK_LOG_DEBUG("Get Gimbal Param");
+    //PSDK_LOG_DEBUG("Get Gimbal Param");
 
     //get gimbal param
     ack->gimbalMode = gimbalMode;
@@ -156,17 +157,21 @@ void GimbalEmu_ReturnHead(const T_PsdkGimbalReturnHeadReq *req, T_PsdkGimbalRetu
  */
 void GimbalEmu_ControlSpeed(const T_PsdkGimbalControlSpeedReq *req, T_PsdkGimbalControlSpeedAck *ack)
 {
-    PSDK_LOG_DEBUG("Control Speed");
+    PSDK_LOG_DEBUG("Control Speed  ");
 
     if (req->ctrlFlag == GIMBAL_ACTION) {
+				
         pitchSpeed = req->pitchSpeed;
         rollSpeed = req->rollSpeed;
         yawSpeed = req->yawSpeed;
+//				PSDK_LOG_DEBUG("pitchSpeed:%4d  rollSpeed:%4d  yawSpeed:%4d",pitchSpeed,rollSpeed,yawSpeed);
     } else {
         pitchSpeed = 0;
         rollSpeed = 0;
         yawSpeed = 0;
     }
+		LED1_T;
+		PSDK_LOG_DEBUG("pitchSpeed:%4d  rollSpeed:%4d  yawSpeed:%4d",pitchSpeed,rollSpeed,yawSpeed);
 
     ack->ackCode = PSDK_CMD_ACK_CODE_OK;
 }

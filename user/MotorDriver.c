@@ -4,15 +4,33 @@
 
 #include "MotorDriver.h"
 
+#define MotorRunningTime 2000
+
 
 uint32_t task_Run_couter=0;
 uint8_t  task_Run_flag=0;
 
 uint32_t Motor_Run_couter=0;
+
 uint8_t  Motor_Run_flag=0;
 
 uint8_t  Motor_Direction_flag=0; //0 -> -, 1->+
+uint8_t  LastDirectionFlag=0;
 
+#ifdef MOTOR
+uint8_t LED_Open_Flag=0;
+void TurnONLED(void)
+{
+	GPIO_WriteBit(BigLED_PORT, BigLED_PIN, Bit_RESET);
+}
+
+void TurnOFFLED(void)
+{
+	GPIO_WriteBit(BigLED_PORT, BigLED_PIN, Bit_SET);
+}
+
+
+#endif
 
 void TurnDownMotro(void)
 {
@@ -36,6 +54,7 @@ void MotorDriverGPIO_Init(void)
 {
 	    GPIO_InitTypeDef GPIO_InitStructure;
 
+	#ifdef MOTOR
     /* GPIO Periph clock enable */
     RCC_APB2PeriphClockCmd(Motor_R_RCC, ENABLE);
 		RCC_APB2PeriphClockCmd(Motor_L_RCC, ENABLE);
@@ -49,6 +68,18 @@ void MotorDriverGPIO_Init(void)
 
 	  GPIO_InitStructure.GPIO_Pin = Motor_L_PIN;
     GPIO_Init(Motor_L_PORT, &GPIO_InitStructure);
+	#else
+		RCC_APB2PeriphClockCmd(BigLED_RCC, ENABLE);
+
+    /* Configure GPIO_InitStructure */
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+
+    GPIO_InitStructure.GPIO_Pin = BigLED_PIN;
+    GPIO_Init(BigLED_PORT, &GPIO_InitStructure);
+	#endif
+	
+	
 }
 
 void TIM4_init(void)
@@ -87,28 +118,42 @@ void TIM4_IRQHandler(void)
     {
        TIM_ClearITPendingBit(TIM4, TIM_IT_Update);
 				task_Run_couter++;
-				Motor_Run_couter++;
-				if(task_Run_couter % 1000==0)  //1000ms
+				if(task_Run_couter % 500==0)  //1000ms
 				{
 					task_Run_couter = 0;
 					task_Run_flag = 1;
 				}
-				if((Motor_Run_couter % 2000==0) && Motor_Run_flag)//电机运行时间
+#ifdef MOTOR
+				if(Motor_Run_flag)
 				{
-					Motor_Run_couter = 0;
-					Motor_Run_flag = 0;
+					if(Motor_Direction_flag==1)
+					{				
+						Motor_Run_couter++;
+						if(Motor_Run_couter>=MotorRunningTime)Motor_Run_couter = MotorRunningTime;
+							
+						TurnDownMotro();
+					}
+					else if(Motor_Direction_flag==0)
+					{
+						Motor_Run_couter--;
+						if(Motor_Run_couter<=0)Motor_Run_couter = 0;
+							
+						TurnUpMotro();
+					}
+					
+					if((Motor_Run_couter >=MotorRunningTime || Motor_Run_couter<=0))//电机运行时间
+					{
+						//Motor_Run_couter = 0;
+						Motor_Run_flag = 0;
+					}
 				}
+				else
+					TurnOFFMotro();
+#else
+				if(LED_Open_Flag==1)  TurnONLED();
+				else if(LED_Open_Flag==0) TurnOFFLED();
+				
+#endif
 		}
-}
-
-void MotorControlFunc(void)
-{
-	if(Motor_Run_flag && Motor_Direction_flag)
-		TurnDownMotro();
-	else if(Motor_Run_flag && Motor_Direction_flag==0)
-		TurnUpMotro();
-	else
-		TurnOFFMotro();
-	
 }
 

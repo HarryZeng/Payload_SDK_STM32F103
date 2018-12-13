@@ -51,3 +51,5 @@
 .\objects\application.o: .\Application\psdk_test\test_msg_push.h
 .\objects\application.o: .\Application\psdk_test\test_payload_cam_emu.h
 .\objects\application.o: .\Application\psdk_test\test_payload_gimbal_emu.h
+.\objects\application.o: .\user\MotorDriver.h
+.\objects\application.o: .\user\ADC.h

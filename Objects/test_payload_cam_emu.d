@@ -18,7 +18,7 @@
 .\objects\test_payload_cam_emu.o: d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h
 .\objects\test_payload_cam_emu.o: d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h
 .\objects\test_payload_cam_emu.o: d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include\system_stm32f10x.h
-.\objects\test_payload_cam_emu.o: ..\Payload_SDK_STM32F103\stm32f10x_conf.h
+.\objects\test_payload_cam_emu.o: ..\Payload_SDK_STM32F103_LED\stm32f10x_conf.h
 .\objects\test_payload_cam_emu.o: .\STM32F10x_StdPeriph_Driver\inc\stm32f10x_fsmc.h
 .\objects\test_payload_cam_emu.o: d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include\stm32f10x.h
 .\objects\test_payload_cam_emu.o: .\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h

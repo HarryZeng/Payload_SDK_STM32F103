@@ -42,3 +42,4 @@
 .\objects\test_payload_gimbal_emu.o: .\psdk\psdk_upper\inc\psdk_payload_camera.h
 .\objects\test_payload_gimbal_emu.o: .\psdk\psdk_upper\inc\psdk_payload_gimbal.h
 .\objects\test_payload_gimbal_emu.o: Application\psdk_test\test_payload_gimbal_emu.h
+.\objects\test_payload_gimbal_emu.o: .\BSP\led_button_switch.h

@@ -29,6 +29,7 @@
 #include "led_button_switch.h"
 #include <string.h>
 #include "MotorDriver.h"
+
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
 
@@ -74,7 +75,8 @@ APPFUNC_DEF_SWITCH_WIDGET(SWITCH1_INDEX, "Throw"),
 static char receivePrint[1024];
 
 //widget value
-static U_AppFuncWidgetValue switch1Val = {.switchVal = PSDK_APPFUNC_SWITCH_VAL_OFF};
+U_AppFuncWidgetValue switch1Val = {.switchVal = PSDK_APPFUNC_SWITCH_VAL_OFF};
+U_AppFuncWidgetValue LastSwitch1Val;
 //static U_AppFuncWidgetValue scale1Val = {.scaleVal = 50};
 //static U_AppFuncWidgetValue input1Val = {.intInputBoxVal = 200};
 //static U_AppFuncWidgetValue list1Val = {.listVal = 1};
@@ -204,15 +206,23 @@ E_PsdkStat Test_SetWidgetValueFunc(E_PsdkAppFuncWidgetType widgetType, uint8_t w
         case SWITCH1_INDEX:
             PSDK_LOG_DEBUG("PouTou Swtich ");
             if (pWidgetValue->switchVal == PSDK_APPFUNC_SWITCH_VAL_ON) {
+#ifdef MOTOR
                 Motor_Run_flag = 1;
 								Motor_Direction_flag = 1;
+#else 
+								LED_Open_Flag = 1;
+#endif
             } else if (pWidgetValue->switchVal == PSDK_APPFUNC_SWITCH_VAL_OFF) {
+#ifdef MOTOR
                 Motor_Run_flag = 1;
 								Motor_Direction_flag = 0;
+#else
+							LED_Open_Flag = 0;
+#endif
             } else {
                 goto err;
             }
-            switch1Val = *pWidgetValue;
+						switch1Val = *pWidgetValue;
             break;
 //        case SWITCH2_INDEX:
 //            PSDK_LOG_DEBUG("Switch2 Opt");

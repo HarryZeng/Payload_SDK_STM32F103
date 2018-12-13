@@ -438,6 +438,11 @@
               <FileType>1</FileType>
               <FilePath>.\user\GUA_Timer1_PWM.c</FilePath>
             </File>
+            <File>
+              <FileName>ADC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\user\ADC.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

@@ -121,6 +121,8 @@ typedef struct {
 /* Exported variables --------------------------------------------------------*/
 /* Exported functions --------------------------------------------------------*/
 
+extern T_PsdkUpper s_psdkUpperHandle;
+
 /** @addtogroup Upper_Exported_Functions
  * @{
  */

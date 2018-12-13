@@ -1,15 +1,17 @@
 
 
 #include "stm32f10x.h"
+#include "stm32f10x_adc.h"
 #include <psdk.h>
 #include "sys.h"
 #include "application.h"
 #include "led_button_switch.h"
 #include "MotorDriver.h"
 #include "GUA_Timer1_PWM.h" 
+#include <psdk.h>
+#include "ADC.h"
 
 
-//#define MOTOR       1
 
 void RCC_Configuration(void)
 {
@@ -60,25 +62,26 @@ int main(void)
 	
 	LOG("BSP init successfully-!\r\n");
 	
-//			Motor_Run_flag = 0;
-//			Motor_Direction_flag = 0;
-					
+	ADCinit();
+						
 	while(1)
 	{
     PsdkProcessRec();
-    PsdkComInfSw();
-		MotorControlFunc();
+
+		ADC_value = Get_Adc()/4096.0*12.0;
 		
 		if(task_Run_flag)
 		{
 			task_Run_flag = 0;
-				
+	
 			LED1_T;
-		
-			PsdkTest();
+			
+#ifdef MOTOR			
+			PsdkMotorTest();
+#else
+			PsdkBigLEDTest();
+#endif
 		}
-		
-		
 	}
 }
 

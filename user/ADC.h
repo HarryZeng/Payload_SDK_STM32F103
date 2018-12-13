@@ -25,51 +25,21 @@
  */
 
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __MORTODRIVER_H__
-#define __MORTODRIVER_H__
+#ifndef __ADC_H__
+#define __ADC_H__
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x.h"
 
-
-#define MOTOR       1
-
-
-extern uint8_t  task_Run_flag;
-extern uint8_t  Motor_Run_flag;
-extern uint8_t  Motor_Direction_flag; //0 -> -, 1->+
-extern uint32_t Motor_Run_couter;
-extern uint8_t  LastDirectionFlag;
-
-#ifdef MOTOR
-extern uint8_t LED_Open_Flag;
-#define BigLED_RCC    RCC_APB2Periph_GPIOB
-#define BigLED_PORT   GPIOB
-#define BigLED_PIN    GPIO_Pin_15
-#endif
-
 /* Exported macros -----------------------------------------------------------*/
 /* Exported types ------------------------------------------------------------*/
 
-#define Motor_R_RCC    RCC_APB2Periph_GPIOA
-#define Motor_R_PORT   GPIOA
-#define Motor_R_PIN    GPIO_Pin_8
-
-#define Motor_L_RCC    RCC_APB2Periph_GPIOA
-#define Motor_L_PORT   GPIOA
-#define Motor_L_PIN    GPIO_Pin_9
-
-
-
+extern float ADC_value;
 
 /* Exported variables --------------------------------------------------------*/
 /* Exported functions --------------------------------------------------------*/
-
-void TurnOFFMotro(void);
-void TurnONMotro(void);
-void MotorDriverGPIO_Init(void);
-void TIM4_init(void);
-void MotorControlFunc(void);
+void ADCinit(void);
+uint16_t Get_Adc(void);
 /* Private constants ---------------------------------------------------------*/
 /* Private macros ------------------------------------------------------------*/
 /* Private types -------------------------------------------------------------*/

@@ -43,6 +43,8 @@
 #include "test_msg_push.h"
 #include "test_payload_cam_emu.h"
 #include "test_payload_gimbal_emu.h"
+#include "MotorDriver.h"
+#include "ADC.h"
 
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
@@ -50,7 +52,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 //PSDK protocol handle structure
-static T_PsdkUpper s_psdkUpperHandle;
+T_PsdkUpper s_psdkUpperHandle;
 
 #if SKYPORT_FW_FIX_VER_NEED
 //fixed SKYPORT FW version
@@ -256,13 +258,24 @@ void PsdkRunIndicate(void)
  * @param None.
  * @return None.
  */
-void PsdkTest(void)
+void PsdkMotorTest(void)
 {
-	double temp=38.88, press=8888.88;
+		char *Status[]={"Opening","closing","Stop"};
+		
+		char *MotorStatus;
     uint16_t realSendLen;
 
+		if(Motor_Run_flag==1) 
+		{
+			if(Motor_Direction_flag==1)
+					MotorStatus = Status[0];
+			else if(Motor_Direction_flag==0)
+					MotorStatus = Status[1];
+		}
+		else if(Motor_Run_flag==0) MotorStatus = Status[2];
+			
     //Ms5607_GetSenorData(&temp, &press);
-    sprintf(s_printBuffer, "Demo Sensor Info:\r\n\r\nBaro Pre = %f mbar\r\n\r\nBoard Temp = %f `C\r\n", press, temp);
+    sprintf(s_printBuffer, "Motor:\r\n\r\n Status = %s \r\n\r\n Voltage : %f", MotorStatus,ADC_value);
 
     //push this info to DJI Pilot Floating Window
     PsdkAppFunc_PushMsgToFloatingWindow(&s_psdkUpperHandle, s_printBuffer);
@@ -270,7 +283,31 @@ void PsdkTest(void)
     //transfer this info to MSDK
     PsdkAppFunc_TransferToApp(&s_psdkUpperHandle, (const uint8_t *) s_printBuffer, strlen(s_printBuffer) + 1,
                               &realSendLen);
-		LOG("Psdk_Test Run successfully-!\r\n");
+}
+
+
+void PsdkBigLEDTest(void)
+{
+		char *Status[]={"Open","close"};
+		
+		char *LEDStatus;
+    uint16_t realSendLen;
+
+		if(LED_Open_Flag==1) 
+		{
+			LEDStatus = Status[0];
+		}
+		else if(LED_Open_Flag==0) LEDStatus = Status[1];
+			
+    //Ms5607_GetSenorData(&temp, &press);
+    sprintf(s_printBuffer, "MainLED:\r\n\r\n Status = %s \r\n\r\n Voltage : %f", LEDStatus,ADC_value);
+
+    //push this info to DJI Pilot Floating Window
+    PsdkAppFunc_PushMsgToFloatingWindow(&s_psdkUpperHandle, s_printBuffer);
+
+    //transfer this info to MSDK
+    PsdkAppFunc_TransferToApp(&s_psdkUpperHandle, (const uint8_t *) s_printBuffer, strlen(s_printBuffer) + 1,
+                              &realSendLen);
 }
 
 /**

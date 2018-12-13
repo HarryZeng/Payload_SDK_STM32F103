@@ -1,7 +1,7 @@
 Dependencies for Project 'STM32F103', Target 'Target 1': (DO NOT MODIFY !)
 F (.\Application\app_infor.h)(0x5C0E42EA)()
 F (.\Application\app_config.h)(0x5C0DC7FF)()
-F (.\main.c)(0x5C10A1DB)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\STM32F10x_StdPeriph_Driver\inc -I .\STM32F10x_StdPeriph_Driver\src -I ..\STM32F103 -I ..\Payload_SDK_STM32F103_LED -I .\Application -I .\Application\psdk_test -I .\psdk\psdk_upper\inc -I .\psdk\psdk_upper\src -I .\psdk\psdk_core\inc -I .\psdk\psdk_core\src -I .\BSP -I .\psdk\psdk_arch\arch_baremetal -I .\user --c99-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE"-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE\Device\STM32F103C8"-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F10X_MD -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (.\main.c)(0x5C11C4BD)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\STM32F10x_StdPeriph_Driver\inc -I .\STM32F10x_StdPeriph_Driver\src -I ..\STM32F103 -I ..\Payload_SDK_STM32F103_LED -I .\Application -I .\Application\psdk_test -I .\psdk\psdk_upper\inc -I .\psdk\psdk_upper\src -I .\psdk\psdk_core\inc -I .\psdk\psdk_core\src -I .\BSP -I .\psdk\psdk_arch\arch_baremetal -I .\user --c99-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE"-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE\Device\STM32F103C8"-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F10X_MD -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include\stm32f10x.h)(0x5C068666)
 I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm3.h)(0x53FC31DA)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5475F300)
@@ -12,6 +12,7 @@ I (..\Payload_SDK_STM32F103_LED\stm32f10x_conf.h)(0x551A0CDC)
 I (.\STM32F10x_StdPeriph_Driver\inc\stm32f10x_fsmc.h)(0x4D783BB4)
 I (.\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
 I (.\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (.\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h)(0x4D783BB4)
 I (.\psdk\psdk_upper\inc\psdk.h)(0x5B9B805D)
 I (.\psdk\psdk_core\inc\psdk_core.h)(0x5B9B805D)
 I (.\psdk\psdk_core\inc\psdk_typedef.h)(0x5B9B805D)
@@ -33,7 +34,7 @@ I (.\psdk\psdk_core\inc\psdk_proto.h)(0x5B9B805D)
 I (.\psdk\psdk_core\inc\psdk_proto_common.h)(0x5B9B805D)
 I (.\psdk\psdk_core\inc\psdk_proto_parse.h)(0x5B9B805D)
 I (.\psdk\psdk_upper\inc\psdk_app_func.h)(0x5B9B805D)
-I (.\psdk\psdk_upper\inc\psdk_upper.h)(0x5B9B805D)
+I (.\psdk\psdk_upper\inc\psdk_upper.h)(0x5C10E5CC)
 I (.\psdk\psdk_upper\inc\psdk_cmdset.h)(0x5B9B805D)
 I (.\psdk\psdk_upper\inc\psdk_cmdset_define/psdk_cmdset_payload_state.h)(0x5B9B805D)
 I (.\psdk\psdk_upper\inc\psdk_cmdset_define/psdk_cmdset_app_func.h)(0x5B9B805D)
@@ -44,11 +45,12 @@ I (.\psdk\psdk_upper\inc\psdk_msg_subcribe.h)(0x5B9B805D)
 I (.\psdk\psdk_upper\inc\psdk_payload_camera.h)(0x5B9B805D)
 I (.\psdk\psdk_upper\inc\psdk_payload_gimbal.h)(0x5B9B805D)
 I (.\BSP\sys.h)(0x5C0DD182)
-I (.\Application\application.h)(0x5BA1C79F)
+I (.\Application\application.h)(0x5C11BCB2)
 I (.\BSP\led_button_switch.h)(0x5C0E1606)
-I (.\user\MotorDriver.h)(0x5C0E2CBA)
+I (.\user\MotorDriver.h)(0x5C11BB8D)
 I (.\user\GUA_Timer1_PWM.h)(0x5C108047)
-F (.\Application\application.c)(0x5C0E2644)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\STM32F10x_StdPeriph_Driver\inc -I .\STM32F10x_StdPeriph_Driver\src -I ..\STM32F103 -I ..\Payload_SDK_STM32F103_LED -I .\Application -I .\Application\psdk_test -I .\psdk\psdk_upper\inc -I .\psdk\psdk_upper\src -I .\psdk\psdk_core\inc -I .\psdk\psdk_core\src -I .\BSP -I .\psdk\psdk_arch\arch_baremetal -I .\user --c99-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE"-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE\Device\STM32F103C8"-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F10X_MD -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\application.o --omf_browse .\objects\application.crf --depend .\objects\application.d)
+I (.\user\ADC.h)(0x5C113730)
+F (.\Application\application.c)(0x5C11C30F)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\STM32F10x_StdPeriph_Driver\inc -I .\STM32F10x_StdPeriph_Driver\src -I ..\STM32F103 -I ..\Payload_SDK_STM32F103_LED -I .\Application -I .\Application\psdk_test -I .\psdk\psdk_upper\inc -I .\psdk\psdk_upper\src -I .\psdk\psdk_core\inc -I .\psdk\psdk_core\src -I .\BSP -I .\psdk\psdk_arch\arch_baremetal -I .\user --c99-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE"-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE\Device\STM32F103C8"-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F10X_MD -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\application.o --omf_browse .\objects\application.crf --depend .\objects\application.d)
 I (.\Application\app_config.h)(0x5C0DC7FF)
 I (.\psdk\psdk_upper\inc\psdk.h)(0x5B9B805D)
 I (.\psdk\psdk_core\inc\psdk_core.h)(0x5B9B805D)
@@ -81,7 +83,7 @@ I (.\psdk\psdk_core\inc\psdk_proto.h)(0x5B9B805D)
 I (.\psdk\psdk_core\inc\psdk_proto_common.h)(0x5B9B805D)
 I (.\psdk\psdk_core\inc\psdk_proto_parse.h)(0x5B9B805D)
 I (.\psdk\psdk_upper\inc\psdk_app_func.h)(0x5B9B805D)
-I (.\psdk\psdk_upper\inc\psdk_upper.h)(0x5B9B805D)
+I (.\psdk\psdk_upper\inc\psdk_upper.h)(0x5C10E5CC)
 I (.\psdk\psdk_upper\inc\psdk_cmdset.h)(0x5B9B805D)
 I (.\psdk\psdk_upper\inc\psdk_cmdset_define/psdk_cmdset_payload_state.h)(0x5B9B805D)
 I (.\psdk\psdk_upper\inc\psdk_cmdset_define/psdk_cmdset_app_func.h)(0x5B9B805D)
@@ -94,12 +96,14 @@ I (.\psdk\psdk_upper\inc\psdk_payload_gimbal.h)(0x5B9B805D)
 I (.\BSP\led_button_switch.h)(0x5C0E1606)
 I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x5475F300)
 I (.\BSP\sys.h)(0x5C0DD182)
-I (Application\application.h)(0x5BA1C79F)
+I (Application\application.h)(0x5C11BCB2)
 I (Application\app_infor.h)(0x5C0E42EA)
 I (.\Application\psdk_test\test_app_func.h)(0x5BA1C79F)
 I (.\Application\psdk_test\test_msg_push.h)(0x5BA1C79F)
 I (.\Application\psdk_test\test_payload_cam_emu.h)(0x5BA1C79F)
 I (.\Application\psdk_test\test_payload_gimbal_emu.h)(0x5BA1C79F)
+I (.\user\MotorDriver.h)(0x5C11BB8D)
+I (.\user\ADC.h)(0x5C113730)
 F (.\BSP\dji_ringbuffer.c)(0x5B9B805D)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\STM32F10x_StdPeriph_Driver\inc -I .\STM32F10x_StdPeriph_Driver\src -I ..\STM32F103 -I ..\Payload_SDK_STM32F103_LED -I .\Application -I .\Application\psdk_test -I .\psdk\psdk_upper\inc -I .\psdk\psdk_upper\src -I .\psdk\psdk_core\inc -I .\psdk\psdk_core\src -I .\BSP -I .\psdk\psdk_arch\arch_baremetal -I .\user --c99-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE"-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE\Device\STM32F103C8"-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F10X_MD -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\dji_ringbuffer.o --omf_browse .\objects\dji_ringbuffer.crf --depend .\objects\dji_ringbuffer.d)
 I (BSP\dji_ringbuffer.h)(0x5C0DD14B)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5475F300)
@@ -186,7 +190,7 @@ I (.\STM32F10x_StdPeriph_Driver\inc\stm32f10x_fsmc.h)(0x4D783BB4)
 I (.\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
 I (.\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
 I (.\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
-F (.\BSP\uart.c)(0x5C0E1859)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\STM32F10x_StdPeriph_Driver\inc -I .\STM32F10x_StdPeriph_Driver\src -I ..\STM32F103 -I ..\Payload_SDK_STM32F103_LED -I .\Application -I .\Application\psdk_test -I .\psdk\psdk_upper\inc -I .\psdk\psdk_upper\src -I .\psdk\psdk_core\inc -I .\psdk\psdk_core\src -I .\BSP -I .\psdk\psdk_arch\arch_baremetal -I .\user --c99-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE"-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE\Device\STM32F103C8"-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F10X_MD -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\uart.o --omf_browse .\objects\uart.crf --depend .\objects\uart.d)
+F (.\BSP\uart.c)(0x5C10DA6B)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\STM32F10x_StdPeriph_Driver\inc -I .\STM32F10x_StdPeriph_Driver\src -I ..\STM32F103 -I ..\Payload_SDK_STM32F103_LED -I .\Application -I .\Application\psdk_test -I .\psdk\psdk_upper\inc -I .\psdk\psdk_upper\src -I .\psdk\psdk_core\inc -I .\psdk\psdk_core\src -I .\BSP -I .\psdk\psdk_arch\arch_baremetal -I .\user --c99-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE"-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE\Device\STM32F103C8"-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F10X_MD -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\uart.o --omf_browse .\objects\uart.crf --depend .\objects\uart.d)
 I (.\psdk\psdk_arch\arch_baremetal\psdk_arch_sys.h)(0x5B9B805D)
 I (.\psdk\psdk_core\inc\psdk_typedef.h)(0x5B9B805D)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5475F300)
@@ -209,7 +213,7 @@ I (.\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
 I (BSP\dji_ringbuffer.h)(0x5C0DD14B)
 I (.\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
 I (.\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x4D783BB4)
-F (.\user\MotorDriver.c)(0x5C1073B5)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\STM32F10x_StdPeriph_Driver\inc -I .\STM32F10x_StdPeriph_Driver\src -I ..\STM32F103 -I ..\Payload_SDK_STM32F103_LED -I .\Application -I .\Application\psdk_test -I .\psdk\psdk_upper\inc -I .\psdk\psdk_upper\src -I .\psdk\psdk_core\inc -I .\psdk\psdk_core\src -I .\BSP -I .\psdk\psdk_arch\arch_baremetal -I .\user --c99-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE"-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE\Device\STM32F103C8"-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F10X_MD -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\motordriver.o --omf_browse .\objects\motordriver.crf --depend .\objects\motordriver.d)
+F (.\user\MotorDriver.c)(0x5C11BD48)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\STM32F10x_StdPeriph_Driver\inc -I .\STM32F10x_StdPeriph_Driver\src -I ..\STM32F103 -I ..\Payload_SDK_STM32F103_LED -I .\Application -I .\Application\psdk_test -I .\psdk\psdk_upper\inc -I .\psdk\psdk_upper\src -I .\psdk\psdk_core\inc -I .\psdk\psdk_core\src -I .\BSP -I .\psdk\psdk_arch\arch_baremetal -I .\user --c99-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE"-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE\Device\STM32F103C8"-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F10X_MD -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\motordriver.o --omf_browse .\objects\motordriver.crf --depend .\objects\motordriver.d)
 I (d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include\stm32f10x.h)(0x5C068666)
 I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm3.h)(0x53FC31DA)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5475F300)
@@ -222,7 +226,7 @@ I (.\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
 I (.\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
 I (.\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
 I (.\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x4D783BB4)
-I (user\MotorDriver.h)(0x5C0E2CBA)
+I (user\MotorDriver.h)(0x5C11BB8D)
 F (.\user\GUA_Timer1_PWM.c)(0x5C10826A)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\STM32F10x_StdPeriph_Driver\inc -I .\STM32F10x_StdPeriph_Driver\src -I ..\STM32F103 -I ..\Payload_SDK_STM32F103_LED -I .\Application -I .\Application\psdk_test -I .\psdk\psdk_upper\inc -I .\psdk\psdk_upper\src -I .\psdk\psdk_core\inc -I .\psdk\psdk_core\src -I .\BSP -I .\psdk\psdk_arch\arch_baremetal -I .\user --c99-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE"-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE\Device\STM32F103C8"-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F10X_MD -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\gua_timer1_pwm.o --omf_browse .\objects\gua_timer1_pwm.crf --depend .\objects\gua_timer1_pwm.d)
 I (d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include\stm32f10x.h)(0x5C068666)
 I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm3.h)(0x53FC31DA)
@@ -236,6 +240,19 @@ I (.\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
 I (.\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
 I (.\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x4D783BB4)
 I (user\GUA_Timer1_PWM.h)(0x5C108047)
+F (.\user\ADC.c)(0x5C113722)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\STM32F10x_StdPeriph_Driver\inc -I .\STM32F10x_StdPeriph_Driver\src -I ..\STM32F103 -I ..\Payload_SDK_STM32F103_LED -I .\Application -I .\Application\psdk_test -I .\psdk\psdk_upper\inc -I .\psdk\psdk_upper\src -I .\psdk\psdk_core\inc -I .\psdk\psdk_core\src -I .\BSP -I .\psdk\psdk_arch\arch_baremetal -I .\user --c99-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE"-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE\Device\STM32F103C8"-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F10X_MD -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\adc.o --omf_browse .\objects\adc.crf --depend .\objects\adc.d)
+I (d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include\stm32f10x.h)(0x5C068666)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm3.h)(0x53FC31DA)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5475F300)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FEF2AA)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FEF2AA)
+I (d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include\system_stm32f10x.h)(0x5825386C)
+I (..\Payload_SDK_STM32F103_LED\stm32f10x_conf.h)(0x551A0CDC)
+I (.\STM32F10x_StdPeriph_Driver\inc\stm32f10x_fsmc.h)(0x4D783BB4)
+I (.\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
+I (.\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
+I (.\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h)(0x4D783BB4)
+I (user\ADC.h)(0x5C113730)
 F (.\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c)(0x5C0DDDCE)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\STM32F10x_StdPeriph_Driver\inc -I .\STM32F10x_StdPeriph_Driver\src -I ..\STM32F103 -I ..\Payload_SDK_STM32F103_LED -I .\Application -I .\Application\psdk_test -I .\psdk\psdk_upper\inc -I .\psdk\psdk_upper\src -I .\psdk\psdk_core\inc -I .\psdk\psdk_core\src -I .\BSP -I .\psdk\psdk_arch\arch_baremetal -I .\user --c99-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE"-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE\Device\STM32F103C8"-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F10X_MD -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\stm32f10x_gpio.o --omf_browse .\objects\stm32f10x_gpio.crf --depend .\objects\stm32f10x_gpio.d)
 I (.\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
 I (d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include\stm32f10x.h)(0x5C068666)
@@ -449,7 +466,7 @@ I (.\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
 I (.\psdk\psdk_core\inc\psdk_proto_parse.h)(0x5B9B805D)
 I (.\psdk\psdk_core\inc\psdk_debug.h)(0x5B9B805D)
 I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x5475F300)
-I (.\psdk\psdk_upper\inc\psdk_upper.h)(0x5B9B805D)
+I (.\psdk\psdk_upper\inc\psdk_upper.h)(0x5C10E5CC)
 I (.\psdk\psdk_core\inc\psdk_core.h)(0x5B9B805D)
 I (.\psdk\psdk_core\inc\psdk_version.h)(0x5B9B805D)
 I (.\psdk\psdk_core\inc\psdk_ack_code.h)(0x5B9B805D)
@@ -488,7 +505,7 @@ I (.\psdk\psdk_core\inc\psdk_proto.h)(0x5B9B805D)
 I (.\psdk\psdk_core\inc\psdk_proto_common.h)(0x5B9B805D)
 I (.\psdk\psdk_core\inc\psdk_proto_parse.h)(0x5B9B805D)
 I (.\psdk\psdk_upper\inc\psdk_app_func.h)(0x5B9B805D)
-I (.\psdk\psdk_upper\inc\psdk_upper.h)(0x5B9B805D)
+I (.\psdk\psdk_upper\inc\psdk_upper.h)(0x5C10E5CC)
 I (.\psdk\psdk_upper\inc\psdk_cmdset.h)(0x5B9B805D)
 I (.\psdk\psdk_upper\inc\psdk_cmdset_define/psdk_cmdset_payload_state.h)(0x5B9B805D)
 I (.\psdk\psdk_upper\inc\psdk_cmdset_define/psdk_cmdset_app_func.h)(0x5B9B805D)
@@ -520,7 +537,7 @@ I (.\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x4D783BB4)
 I (.\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x4D783BB4)
 F (.\psdk\psdk_upper\src\psdk_app_func.c)(0x5B9B805D)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\STM32F10x_StdPeriph_Driver\inc -I .\STM32F10x_StdPeriph_Driver\src -I ..\STM32F103 -I ..\Payload_SDK_STM32F103_LED -I .\Application -I .\Application\psdk_test -I .\psdk\psdk_upper\inc -I .\psdk\psdk_upper\src -I .\psdk\psdk_core\inc -I .\psdk\psdk_core\src -I .\BSP -I .\psdk\psdk_arch\arch_baremetal -I .\user --c99-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE"-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE\Device\STM32F103C8"-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F10X_MD -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\psdk_app_func.o --omf_browse .\objects\psdk_app_func.crf --depend .\objects\psdk_app_func.d)
 I (.\psdk\psdk_upper\inc\psdk_app_func.h)(0x5B9B805D)
-I (.\psdk\psdk_upper\inc\psdk_upper.h)(0x5B9B805D)
+I (.\psdk\psdk_upper\inc\psdk_upper.h)(0x5C10E5CC)
 I (.\psdk\psdk_core\inc\psdk_core.h)(0x5B9B805D)
 I (.\psdk\psdk_core\inc\psdk_typedef.h)(0x5B9B805D)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5475F300)
@@ -559,7 +576,7 @@ I (.\psdk\psdk_upper\inc\psdk_cmdset_define/psdk_cmdset_gimbal.h)(0x5B9B805D)
 I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x5475F300)
 F (.\psdk\psdk_upper\src\psdk_msg_subcribe.c)(0x5B9B805D)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\STM32F10x_StdPeriph_Driver\inc -I .\STM32F10x_StdPeriph_Driver\src -I ..\STM32F103 -I ..\Payload_SDK_STM32F103_LED -I .\Application -I .\Application\psdk_test -I .\psdk\psdk_upper\inc -I .\psdk\psdk_upper\src -I .\psdk\psdk_core\inc -I .\psdk\psdk_core\src -I .\BSP -I .\psdk\psdk_arch\arch_baremetal -I .\user --c99-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE"-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE\Device\STM32F103C8"-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F10X_MD -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\psdk_msg_subcribe.o --omf_browse .\objects\psdk_msg_subcribe.crf --depend .\objects\psdk_msg_subcribe.d)
 I (.\psdk\psdk_upper\inc\psdk_msg_subcribe.h)(0x5B9B805D)
-I (.\psdk\psdk_upper\inc\psdk_upper.h)(0x5B9B805D)
+I (.\psdk\psdk_upper\inc\psdk_upper.h)(0x5C10E5CC)
 I (.\psdk\psdk_core\inc\psdk_core.h)(0x5B9B805D)
 I (.\psdk\psdk_core\inc\psdk_typedef.h)(0x5B9B805D)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5475F300)
@@ -628,7 +645,7 @@ I (.\psdk\psdk_core\inc\psdk_proto.h)(0x5B9B805D)
 I (.\psdk\psdk_core\inc\psdk_proto_common.h)(0x5B9B805D)
 I (.\psdk\psdk_core\inc\psdk_proto_parse.h)(0x5B9B805D)
 I (.\psdk\psdk_upper\inc\psdk_app_func.h)(0x5B9B805D)
-I (.\psdk\psdk_upper\inc\psdk_upper.h)(0x5B9B805D)
+I (.\psdk\psdk_upper\inc\psdk_upper.h)(0x5C10E5CC)
 I (.\psdk\psdk_upper\inc\psdk_cmdset.h)(0x5B9B805D)
 I (.\psdk\psdk_upper\inc\psdk_cmdset_define/psdk_cmdset_payload_state.h)(0x5B9B805D)
 I (.\psdk\psdk_upper\inc\psdk_cmdset_define/psdk_cmdset_app_func.h)(0x5B9B805D)
@@ -670,7 +687,7 @@ I (.\psdk\psdk_core\inc\psdk_proto.h)(0x5B9B805D)
 I (.\psdk\psdk_core\inc\psdk_proto_common.h)(0x5B9B805D)
 I (.\psdk\psdk_core\inc\psdk_proto_parse.h)(0x5B9B805D)
 I (.\psdk\psdk_upper\inc\psdk_app_func.h)(0x5B9B805D)
-I (.\psdk\psdk_upper\inc\psdk_upper.h)(0x5B9B805D)
+I (.\psdk\psdk_upper\inc\psdk_upper.h)(0x5C10E5CC)
 I (.\psdk\psdk_upper\inc\psdk_cmdset.h)(0x5B9B805D)
 I (.\psdk\psdk_upper\inc\psdk_cmdset_define/psdk_cmdset_payload_state.h)(0x5B9B805D)
 I (.\psdk\psdk_upper\inc\psdk_cmdset_define/psdk_cmdset_app_func.h)(0x5B9B805D)
@@ -681,7 +698,7 @@ I (.\psdk\psdk_upper\inc\psdk_msg_subcribe.h)(0x5B9B805D)
 I (.\psdk\psdk_upper\inc\psdk_payload_camera.h)(0x5B9B805D)
 I (.\psdk\psdk_upper\inc\psdk_payload_gimbal.h)(0x5B9B805D)
 F (.\psdk\psdk_upper\src\psdk_upper.c)(0x5B9B805D)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\STM32F10x_StdPeriph_Driver\inc -I .\STM32F10x_StdPeriph_Driver\src -I ..\STM32F103 -I ..\Payload_SDK_STM32F103_LED -I .\Application -I .\Application\psdk_test -I .\psdk\psdk_upper\inc -I .\psdk\psdk_upper\src -I .\psdk\psdk_core\inc -I .\psdk\psdk_core\src -I .\BSP -I .\psdk\psdk_arch\arch_baremetal -I .\user --c99-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE"-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE\Device\STM32F103C8"-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F10X_MD -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\psdk_upper.o --omf_browse .\objects\psdk_upper.crf --depend .\objects\psdk_upper.d)
-I (.\psdk\psdk_upper\inc\psdk_upper.h)(0x5B9B805D)
+I (.\psdk\psdk_upper\inc\psdk_upper.h)(0x5C10E5CC)
 I (.\psdk\psdk_core\inc\psdk_core.h)(0x5B9B805D)
 I (.\psdk\psdk_core\inc\psdk_typedef.h)(0x5B9B805D)
 I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5475F300)
@@ -723,7 +740,7 @@ I (.\psdk\psdk_upper\inc\psdk_cmdset_define/psdk_cmdset_gimbal.h)(0x5B9B805D)
 I (.\psdk\psdk_upper\inc\psdk_msg_subcribe.h)(0x5B9B805D)
 I (.\psdk\psdk_upper\inc\psdk_payload_camera.h)(0x5B9B805D)
 I (.\psdk\psdk_upper\inc\psdk_payload_gimbal.h)(0x5B9B805D)
-F (.\Application\psdk_test\test_app_func.c)(0x5C0E5E6C)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\STM32F10x_StdPeriph_Driver\inc -I .\STM32F10x_StdPeriph_Driver\src -I ..\STM32F103 -I ..\Payload_SDK_STM32F103_LED -I .\Application -I .\Application\psdk_test -I .\psdk\psdk_upper\inc -I .\psdk\psdk_upper\src -I .\psdk\psdk_core\inc -I .\psdk\psdk_core\src -I .\BSP -I .\psdk\psdk_arch\arch_baremetal -I .\user --c99-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE"-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE\Device\STM32F103C8"-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F10X_MD -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\test_app_func.o --omf_browse .\objects\test_app_func.crf --depend .\objects\test_app_func.d)
+F (.\Application\psdk_test\test_app_func.c)(0x5C11C240)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\STM32F10x_StdPeriph_Driver\inc -I .\STM32F10x_StdPeriph_Driver\src -I ..\STM32F103 -I ..\Payload_SDK_STM32F103_LED -I .\Application -I .\Application\psdk_test -I .\psdk\psdk_upper\inc -I .\psdk\psdk_upper\src -I .\psdk\psdk_core\inc -I .\psdk\psdk_core\src -I .\BSP -I .\psdk\psdk_arch\arch_baremetal -I .\user --c99-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE"-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE\Device\STM32F103C8"-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F10X_MD -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\test_app_func.o --omf_browse .\objects\test_app_func.crf --depend .\objects\test_app_func.d)
 I (Application\psdk_test\test_app_func.h)(0x5BA1C79F)
 I (.\psdk\psdk_upper\inc\psdk.h)(0x5B9B805D)
 I (.\psdk\psdk_core\inc\psdk_core.h)(0x5B9B805D)
@@ -756,7 +773,7 @@ I (.\psdk\psdk_core\inc\psdk_proto.h)(0x5B9B805D)
 I (.\psdk\psdk_core\inc\psdk_proto_common.h)(0x5B9B805D)
 I (.\psdk\psdk_core\inc\psdk_proto_parse.h)(0x5B9B805D)
 I (.\psdk\psdk_upper\inc\psdk_app_func.h)(0x5B9B805D)
-I (.\psdk\psdk_upper\inc\psdk_upper.h)(0x5B9B805D)
+I (.\psdk\psdk_upper\inc\psdk_upper.h)(0x5C10E5CC)
 I (.\psdk\psdk_upper\inc\psdk_cmdset.h)(0x5B9B805D)
 I (.\psdk\psdk_upper\inc\psdk_cmdset_define/psdk_cmdset_payload_state.h)(0x5B9B805D)
 I (.\psdk\psdk_upper\inc\psdk_cmdset_define/psdk_cmdset_app_func.h)(0x5B9B805D)
@@ -768,7 +785,7 @@ I (.\psdk\psdk_upper\inc\psdk_payload_camera.h)(0x5B9B805D)
 I (.\psdk\psdk_upper\inc\psdk_payload_gimbal.h)(0x5B9B805D)
 I (.\BSP\led_button_switch.h)(0x5C0E1606)
 I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x5475F300)
-I (.\user\MotorDriver.h)(0x5C0E2CBA)
+I (.\user\MotorDriver.h)(0x5C11BB8D)
 F (.\Application\psdk_test\test_msg_push.c)(0x5BA1C79E)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\STM32F10x_StdPeriph_Driver\inc -I .\STM32F10x_StdPeriph_Driver\src -I ..\STM32F103 -I ..\Payload_SDK_STM32F103_LED -I .\Application -I .\Application\psdk_test -I .\psdk\psdk_upper\inc -I .\psdk\psdk_upper\src -I .\psdk\psdk_core\inc -I .\psdk\psdk_core\src -I .\BSP -I .\psdk\psdk_arch\arch_baremetal -I .\user --c99-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE"-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE\Device\STM32F103C8"-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F10X_MD -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\test_msg_push.o --omf_browse .\objects\test_msg_push.crf --depend .\objects\test_msg_push.d)
 I (.\psdk\psdk_upper\inc\psdk.h)(0x5B9B805D)
 I (.\psdk\psdk_core\inc\psdk_core.h)(0x5B9B805D)
@@ -801,7 +818,7 @@ I (.\psdk\psdk_core\inc\psdk_proto.h)(0x5B9B805D)
 I (.\psdk\psdk_core\inc\psdk_proto_common.h)(0x5B9B805D)
 I (.\psdk\psdk_core\inc\psdk_proto_parse.h)(0x5B9B805D)
 I (.\psdk\psdk_upper\inc\psdk_app_func.h)(0x5B9B805D)
-I (.\psdk\psdk_upper\inc\psdk_upper.h)(0x5B9B805D)
+I (.\psdk\psdk_upper\inc\psdk_upper.h)(0x5C10E5CC)
 I (.\psdk\psdk_upper\inc\psdk_cmdset.h)(0x5B9B805D)
 I (.\psdk\psdk_upper\inc\psdk_cmdset_define/psdk_cmdset_payload_state.h)(0x5B9B805D)
 I (.\psdk\psdk_upper\inc\psdk_cmdset_define/psdk_cmdset_app_func.h)(0x5B9B805D)
@@ -811,7 +828,7 @@ I (.\psdk\psdk_upper\inc\psdk_cmdset_define/psdk_cmdset_gimbal.h)(0x5B9B805D)
 I (.\psdk\psdk_upper\inc\psdk_msg_subcribe.h)(0x5B9B805D)
 I (.\psdk\psdk_upper\inc\psdk_payload_camera.h)(0x5B9B805D)
 I (.\psdk\psdk_upper\inc\psdk_payload_gimbal.h)(0x5B9B805D)
-F (.\Application\psdk_test\test_payload_gimbal_emu.c)(0x5C0F79DA)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\STM32F10x_StdPeriph_Driver\inc -I .\STM32F10x_StdPeriph_Driver\src -I ..\STM32F103 -I ..\Payload_SDK_STM32F103_LED -I .\Application -I .\Application\psdk_test -I .\psdk\psdk_upper\inc -I .\psdk\psdk_upper\src -I .\psdk\psdk_core\inc -I .\psdk\psdk_core\src -I .\BSP -I .\psdk\psdk_arch\arch_baremetal -I .\user --c99-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE"-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE\Device\STM32F103C8"-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F10X_MD -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\test_payload_gimbal_emu.o --omf_browse .\objects\test_payload_gimbal_emu.crf --depend .\objects\test_payload_gimbal_emu.d)
+F (.\Application\psdk_test\test_payload_gimbal_emu.c)(0x5C11CD2C)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\STM32F10x_StdPeriph_Driver\inc -I .\STM32F10x_StdPeriph_Driver\src -I ..\STM32F103 -I ..\Payload_SDK_STM32F103_LED -I .\Application -I .\Application\psdk_test -I .\psdk\psdk_upper\inc -I .\psdk\psdk_upper\src -I .\psdk\psdk_core\inc -I .\psdk\psdk_core\src -I .\BSP -I .\psdk\psdk_arch\arch_baremetal -I .\user --c99-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE"-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE\Device\STM32F103C8"-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F10X_MD -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\test_payload_gimbal_emu.o --omf_browse .\objects\test_payload_gimbal_emu.crf --depend .\objects\test_payload_gimbal_emu.d)
 I (.\psdk\psdk_upper\inc\psdk.h)(0x5B9B805D)
 I (.\psdk\psdk_core\inc\psdk_core.h)(0x5B9B805D)
 I (.\psdk\psdk_core\inc\psdk_typedef.h)(0x5B9B805D)
@@ -843,7 +860,7 @@ I (.\psdk\psdk_core\inc\psdk_proto.h)(0x5B9B805D)
 I (.\psdk\psdk_core\inc\psdk_proto_common.h)(0x5B9B805D)
 I (.\psdk\psdk_core\inc\psdk_proto_parse.h)(0x5B9B805D)
 I (.\psdk\psdk_upper\inc\psdk_app_func.h)(0x5B9B805D)
-I (.\psdk\psdk_upper\inc\psdk_upper.h)(0x5B9B805D)
+I (.\psdk\psdk_upper\inc\psdk_upper.h)(0x5C10E5CC)
 I (.\psdk\psdk_upper\inc\psdk_cmdset.h)(0x5B9B805D)
 I (.\psdk\psdk_upper\inc\psdk_cmdset_define/psdk_cmdset_payload_state.h)(0x5B9B805D)
 I (.\psdk\psdk_upper\inc\psdk_cmdset_define/psdk_cmdset_app_func.h)(0x5B9B805D)
@@ -854,6 +871,7 @@ I (.\psdk\psdk_upper\inc\psdk_msg_subcribe.h)(0x5B9B805D)
 I (.\psdk\psdk_upper\inc\psdk_payload_camera.h)(0x5B9B805D)
 I (.\psdk\psdk_upper\inc\psdk_payload_gimbal.h)(0x5B9B805D)
 I (Application\psdk_test\test_payload_gimbal_emu.h)(0x5BA1C79F)
+I (.\BSP\led_button_switch.h)(0x5C0E1606)
 F (RTE\Device\STM32F103C8\RTE_Device.h)(0x57D24F70)()
 F (RTE\Device\STM32F103C8\startup_stm32f10x_md.s)(0x5825386C)(--cpu Cortex-M3 -g --apcs=interwork -I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE"-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE\Device\STM32F103C8"-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include--pd "__UVISION_VERSION SETA 520" --pd "_RTE_ SETA 1" --pd "STM32F10X_MD SETA 1"--list .\listings\startup_stm32f10x_md.lst --xref -o .\objects\startup_stm32f10x_md.o --depend .\objects\startup_stm32f10x_md.d)
 F (RTE\Device\STM32F103C8\system_stm32f10x.c)(0x5825386C)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\STM32F10x_StdPeriph_Driver\inc -I .\STM32F10x_StdPeriph_Driver\src -I ..\STM32F103 -I ..\Payload_SDK_STM32F103_LED -I .\Application -I .\Application\psdk_test -I .\psdk\psdk_upper\inc -I .\psdk\psdk_upper\src -I .\psdk\psdk_core\inc -I .\psdk\psdk_core\src -I .\BSP -I .\psdk\psdk_arch\arch_baremetal -I .\user --c99-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE"-I "D:\ZHR\Evening Enjoying Pavilion\抛投\code\Payload_SDK_STM32F103_LED\RTE\Device\STM32F103C8"-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F10X_MD -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\system_stm32f10x.o --omf_browse .\objects\system_stm32f10x.crf --depend .\objects\system_stm32f10x.d)

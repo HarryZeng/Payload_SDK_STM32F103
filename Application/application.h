@@ -47,7 +47,8 @@ void ProcessPsdkRecTask(void const *parameter);
 #else
 void PsdkComInfSw(void);
 void PsdkRunIndicate(void);
-void PsdkTest(void);
+void PsdkMotorTest(void);
+void PsdkBigLEDTest(void);
 void PsdkProcessRec(void);
 #endif
 

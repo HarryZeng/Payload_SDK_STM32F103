@@ -104,12 +104,14 @@ RCC_APB1PeriphClockCmd(RCC_APBPeriph_UART##n, ENABLE);                          
 {                                                                               \
 GPIO_InitTypeDef GPIO_InitStructure;                                            \
                                                                                 \
+GPIO_InitStructure.GPIO_Mode  = GPIO_Mode_IPU;                                   \
+GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;                               \
+GPIO_InitStructure.GPIO_Pin = UART##n##_GPIO_RX;            \
+GPIO_Init(UART##n##_GPIO, &GPIO_InitStructure);                                 \
 GPIO_InitStructure.GPIO_Mode  = GPIO_Mode_AF_PP;                                   \
 GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;                               \
-GPIO_InitStructure.GPIO_Pin = UART##n##_GPIO_TX | UART##n##_GPIO_RX;            \
+GPIO_InitStructure.GPIO_Pin = UART##n##_GPIO_TX ;            \
 GPIO_Init(UART##n##_GPIO, &GPIO_InitStructure);                                 \
-    \
-   \
 }
 
 //UART module configure

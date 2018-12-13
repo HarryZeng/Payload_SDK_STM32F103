@@ -10,6 +10,7 @@
 .\objects\main.o: d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include\stm32f10x.h
 .\objects\main.o: .\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h
 .\objects\main.o: .\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h
+.\objects\main.o: .\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h
 .\objects\main.o: .\psdk\psdk_upper\inc\psdk.h
 .\objects\main.o: .\psdk\psdk_core\inc\psdk_core.h
 .\objects\main.o: .\psdk\psdk_core\inc\psdk_typedef.h
@@ -46,3 +47,4 @@
 .\objects\main.o: .\BSP\led_button_switch.h
 .\objects\main.o: .\user\MotorDriver.h
 .\objects\main.o: .\user\GUA_Timer1_PWM.h
+.\objects\main.o: .\user\ADC.h

@@ -9,6 +9,7 @@
 ".\objects\uart.o"
 ".\objects\motordriver.o"
 ".\objects\gua_timer1_pwm.o"
+".\objects\adc.o"
 ".\objects\stm32f10x_gpio.o"
 ".\objects\stm32f10x_rcc.o"
 ".\objects\stm32f10x_adc.o"
