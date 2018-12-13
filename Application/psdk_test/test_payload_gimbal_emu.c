@@ -161,17 +161,23 @@ void GimbalEmu_ControlSpeed(const T_PsdkGimbalControlSpeedReq *req, T_PsdkGimbal
 
     if (req->ctrlFlag == GIMBAL_ACTION) {
 				
-        pitchSpeed = req->pitchSpeed;
+//        pitchSpeed = req->pitchSpeed;
+//        rollSpeed = req->rollSpeed;
+//        yawSpeed = req->yawSpeed;
+			
+        pitchSpeed = ((req->pitchSpeed*5)/18)+1500;
         rollSpeed = req->rollSpeed;
-        yawSpeed = req->yawSpeed;
-//				PSDK_LOG_DEBUG("pitchSpeed:%4d  rollSpeed:%4d  yawSpeed:%4d",pitchSpeed,rollSpeed,yawSpeed);
+        yawSpeed = ((req->yawSpeed*5)/18)+1500;				
+			
+				
+				PSDK_LOG_DEBUG("pitchSpeed:%4d  rollSpeed:%4d  yawSpeed:%4d",pitchSpeed,rollSpeed,yawSpeed);
     } else {
         pitchSpeed = 0;
         rollSpeed = 0;
         yawSpeed = 0;
     }
 		LED1_T;
-		PSDK_LOG_DEBUG("pitchSpeed:%4d  rollSpeed:%4d  yawSpeed:%4d",pitchSpeed,rollSpeed,yawSpeed);
+		//PSDK_LOG_DEBUG("pitchSpeed:%4d  rollSpeed:%4d  yawSpeed:%4d",pitchSpeed,rollSpeed,yawSpeed);
 
     ack->ackCode = PSDK_CMD_ACK_CODE_OK;
 }

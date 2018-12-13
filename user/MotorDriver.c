@@ -4,7 +4,7 @@
 
 #include "MotorDriver.h"
 
-#define MotorRunningTime 2000
+#define MotorRunningTime 1800
 
 
 uint32_t task_Run_couter=0;
