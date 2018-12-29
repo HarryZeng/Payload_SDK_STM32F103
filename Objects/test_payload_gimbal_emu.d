@@ -14,11 +14,11 @@
 .\objects\test_payload_gimbal_emu.o: .\BSP\dji_typedef.h
 .\objects\test_payload_gimbal_emu.o: .\BSP\uart.h
 .\objects\test_payload_gimbal_emu.o: d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include\stm32f10x.h
-.\objects\test_payload_gimbal_emu.o: d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm3.h
-.\objects\test_payload_gimbal_emu.o: d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h
-.\objects\test_payload_gimbal_emu.o: d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h
+.\objects\test_payload_gimbal_emu.o: d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm3.h
+.\objects\test_payload_gimbal_emu.o: d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h
+.\objects\test_payload_gimbal_emu.o: d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h
 .\objects\test_payload_gimbal_emu.o: d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include\system_stm32f10x.h
-.\objects\test_payload_gimbal_emu.o: ..\Payload_SDK_STM32F103_LED\stm32f10x_conf.h
+.\objects\test_payload_gimbal_emu.o: ..\Payload_SDK_STM32F103\stm32f10x_conf.h
 .\objects\test_payload_gimbal_emu.o: .\STM32F10x_StdPeriph_Driver\inc\stm32f10x_fsmc.h
 .\objects\test_payload_gimbal_emu.o: d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include\stm32f10x.h
 .\objects\test_payload_gimbal_emu.o: .\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h
@@ -43,3 +43,4 @@
 .\objects\test_payload_gimbal_emu.o: .\psdk\psdk_upper\inc\psdk_payload_gimbal.h
 .\objects\test_payload_gimbal_emu.o: Application\psdk_test\test_payload_gimbal_emu.h
 .\objects\test_payload_gimbal_emu.o: .\BSP\led_button_switch.h
+.\objects\test_payload_gimbal_emu.o: .\user\communicate.h

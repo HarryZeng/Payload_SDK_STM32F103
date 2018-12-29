@@ -50,7 +50,7 @@ static uint8_t isLogInit = 0;
  */
 void LOG_Init(void)
 {
-    UART_Init(UART_NUM_1, 115200);
+    UART_Init(UART_NUM_3, 115200);
     isLogInit = 1;
 }
 
@@ -67,7 +67,7 @@ void UART_Printf(const char *fmt, ...)
         va_list args;
         va_start (args, fmt);
         vsnprintf(buffer, sizeof(buffer), fmt, args);
-        UART_Write(UART_NUM_1, (uint8_t *)buffer, (uint16_t)(strlen(buffer) + 1));
+        UART_Write(UART_NUM_3, (uint8_t *)buffer, (uint16_t)(strlen(buffer) + 1));
         va_end(args);
     }
 }

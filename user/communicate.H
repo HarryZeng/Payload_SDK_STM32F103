@@ -25,56 +25,45 @@
  */
 
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __MORTODRIVER_H__
-#define __MORTODRIVER_H__
+#ifndef __COMMUNICATE_H__
+#define __COMMUNICATE_H__
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x.h"
+ #define Communicate_USARTx 									USART1
+ #define Communicate_USART_CLK 								RCC_APB2Periph_USART1
+ #define Communicate_USART_APBxClkCmd 				RCC_APB2PeriphClockCmd
+ #define Communicate_USART_BAUDRATE 					115200 
+ // USART GPIO 
+ #define Communicate_USART_GPIO_CLK 					(RCC_APB2Periph_GPIOB)
+ #define Communicate_USART_GPIO_APBxClkCmd 		RCC_APB2PeriphClockCmd 
 
+ #define Communicate_USART_TX_GPIO_PORT 			GPIOB
+ #define Communicate_USART_TX_GPIO_PIN 				GPIO_Pin_6
+ #define Communicate_USART_RX_GPIO_PORT 			GPIOB
+ #define Communicate_USART_RX_GPIO_PIN 				GPIO_Pin_7
 
-//#define MOTOR       1
-
-
-extern uint8_t  task_Run_flag;
-extern uint8_t  Motor_Run_flag;
-extern uint8_t  Motor_Direction_flag; //0 -> -, 1->+
-extern uint32_t Motor_Run_couter;
-extern uint8_t  LastDirectionFlag;
-
-#ifdef MOTOR
-
-#define Motor_R_RCC    RCC_APB2Periph_GPIOA
-#define Motor_R_PORT   GPIOA
-#define Motor_R_PIN    GPIO_Pin_8
-
-#define Motor_L_RCC    RCC_APB2Periph_GPIOA
-#define Motor_L_PORT   GPIOA
-#define Motor_L_PIN    GPIO_Pin_9
-
-
-#else
-
-extern uint8_t LED_Open_Flag;
-#define BigLED_RCC    RCC_APB2Periph_GPIOB
-#define BigLED_PORT   GPIOB
-#define BigLED_PIN    GPIO_Pin_15
-#endif
-
-/* Exported macros -----------------------------------------------------------*/
-/* Exported types ------------------------------------------------------------*/
+ #define Communicate_USART_IRQ 								USART1_IRQn
+ #define Communicate_USART_IRQHandler 				USART1_IRQHandler
 
 
 
+#define USART_REC_LEN  			200  	//定义最大接收字节数 200
+#define CommandLenth   11
+extern u8 finishFlah;			
+extern u8  USART_RX_BUF[USART_REC_LEN]; 	//接收缓冲,最大USART_REC_LEN个字节.末字节为换行符 
+extern u16 USART_RX_STA;         					//接收状态标记	
+extern char USART_TX_BUF[];
+
+extern u8 USART_RX_BUF[USART_REC_LEN];     //接收缓冲,最大USART_REC_LEN个字节.
+extern u16 USART_RX_STA;       //接收状态标记	 
+extern u8 rxFlag;
+extern int16_t rxCounter;
+extern int16_t rxCounterf;
+void CommunicateUSART_Config(void);	 
+void CommunicateUsart_SendString( USART_TypeDef * pUSARTx, char *str,int16_t length);
 
 
-/* Exported variables --------------------------------------------------------*/
-/* Exported functions --------------------------------------------------------*/
-
-void TurnOFFMotro(void);
-void TurnONMotro(void);
-void MotorDriverGPIO_Init(void);
-void TIM4_init(void);
-void MotorControlFunc(void);
 /* Private constants ---------------------------------------------------------*/
 /* Private macros ------------------------------------------------------------*/
 /* Private types -------------------------------------------------------------*/

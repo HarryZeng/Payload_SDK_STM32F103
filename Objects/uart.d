@@ -10,11 +10,11 @@
 .\objects\uart.o: .\BSP\dji_typedef.h
 .\objects\uart.o: .\BSP\uart.h
 .\objects\uart.o: d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include\stm32f10x.h
-.\objects\uart.o: d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm3.h
-.\objects\uart.o: d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h
-.\objects\uart.o: d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h
+.\objects\uart.o: d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm3.h
+.\objects\uart.o: d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h
+.\objects\uart.o: d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h
 .\objects\uart.o: d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include\system_stm32f10x.h
-.\objects\uart.o: ..\Payload_SDK_STM32F103_LED\stm32f10x_conf.h
+.\objects\uart.o: ..\Payload_SDK_STM32F103\stm32f10x_conf.h
 .\objects\uart.o: .\STM32F10x_StdPeriph_Driver\inc\stm32f10x_fsmc.h
 .\objects\uart.o: d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include\stm32f10x.h
 .\objects\uart.o: .\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h

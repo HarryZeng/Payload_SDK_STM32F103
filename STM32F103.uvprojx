@@ -10,7 +10,8 @@
       <TargetName>Target 1</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>5050106::V5.05 update 1 (build 106)::ARMCC</pCCUsed>
+      <pCCUsed>5060528::V5.06 update 5 (build 528)::ARMCC</pCCUsed>
+      <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>STM32F103C8</Device>
@@ -330,11 +331,12 @@
             <vShortWch>1</vShortWch>
             <v6Lto>0</v6Lto>
             <v6WtE>0</v6WtE>
+            <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls>--c99</MiscControls>
               <Define>STM32F10X_MD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>.\STM32F10x_StdPeriph_Driver\inc;.\STM32F10x_StdPeriph_Driver\src;..\STM32F103;..\Payload_SDK_STM32F103_LED;.\Application;.\Application\psdk_test;.\psdk\psdk_upper\inc;.\psdk\psdk_upper\src;.\psdk\psdk_core\inc;.\psdk\psdk_core\src;.\BSP;.\psdk\psdk_arch\arch_baremetal;.\user</IncludePath>
+              <IncludePath>.\STM32F10x_StdPeriph_Driver\inc;.\STM32F10x_StdPeriph_Driver\src;..\STM32F103;.\Application;.\Application\psdk_test;.\psdk\psdk_upper\inc;.\psdk\psdk_upper\src;.\psdk\psdk_core\inc;.\psdk\psdk_core\src;.\BSP;.\psdk\psdk_arch\arch_baremetal;.\user;..\Payload_SDK_STM32F103</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -442,6 +444,11 @@
               <FileName>ADC.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\user\ADC.c</FilePath>
+            </File>
+            <File>
+              <FileName>communicate.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\user\communicate.c</FilePath>
             </File>
           </Files>
         </Group>

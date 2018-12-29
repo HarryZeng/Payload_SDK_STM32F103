@@ -18,19 +18,7 @@ uint8_t  Motor_Direction_flag=0; //0 -> -, 1->+
 uint8_t  LastDirectionFlag=0;
 
 #ifdef MOTOR
-uint8_t LED_Open_Flag=0;
-void TurnONLED(void)
-{
-	GPIO_WriteBit(BigLED_PORT, BigLED_PIN, Bit_RESET);
-}
 
-void TurnOFFLED(void)
-{
-	GPIO_WriteBit(BigLED_PORT, BigLED_PIN, Bit_SET);
-}
-
-
-#endif
 
 void TurnDownMotro(void)
 {
@@ -49,6 +37,24 @@ void TurnOFFMotro(void)
 	GPIO_WriteBit(Motor_R_PORT, Motor_R_PIN, Bit_RESET);
 	GPIO_WriteBit(Motor_L_PORT, Motor_L_PIN, Bit_RESET);
 }
+
+#else
+
+uint8_t LED_Open_Flag=0;
+void TurnONLED(void)
+{
+	GPIO_WriteBit(BigLED_PORT, BigLED_PIN, Bit_RESET);
+}
+
+void TurnOFFLED(void)
+{
+	GPIO_WriteBit(BigLED_PORT, BigLED_PIN, Bit_SET);
+}
+
+
+#endif
+
+
 
 void MotorDriverGPIO_Init(void)
 {
@@ -118,7 +124,7 @@ void TIM4_IRQHandler(void)
     {
        TIM_ClearITPendingBit(TIM4, TIM_IT_Update);
 				task_Run_couter++;
-				if(task_Run_couter % 500==0)  //1000ms
+				if(task_Run_couter % 500==0)  //500ms
 				{
 					task_Run_couter = 0;
 					task_Run_flag = 1;

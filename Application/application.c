@@ -36,7 +36,7 @@
 #include <stdio.h>
 #include <psdk_upper.h>
 //#include "flash.h"
-
+#include "communicate.h"
 #include "application.h"
 #include "app_infor.h"
 #include "test_app_func.h"
@@ -274,7 +274,6 @@ void PsdkMotorTest(void)
 		}
 		else if(Motor_Run_flag==0) MotorStatus = Status[2];
 			
-    //Ms5607_GetSenorData(&temp, &press);
     sprintf(s_printBuffer, "Motor:\r\n\r\n Status = %s \r\n\r\n Voltage : %f", MotorStatus,ADC_value);
 
     //push this info to DJI Pilot Floating Window
@@ -296,10 +295,14 @@ void PsdkBigLEDTest(void)
 		if(LED_Open_Flag==1) 
 		{
 			LEDStatus = Status[0];
+			USART_TX_BUF[8] = 0x01;
 		}
-		else if(LED_Open_Flag==0) LEDStatus = Status[1];
-			
-    //Ms5607_GetSenorData(&temp, &press);
+		else if(LED_Open_Flag==0) 
+		{
+			LEDStatus = Status[1];
+			USART_TX_BUF[8] = 0x00;
+		}
+
     sprintf(s_printBuffer, "MainLED:\r\n\r\n Status = %s \r\n\r\n Voltage : %f", LEDStatus,ADC_value);
 
     //push this info to DJI Pilot Floating Window

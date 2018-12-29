@@ -29,6 +29,7 @@
 #include <psdk_cmdset_define/psdk_cmdset_gimbal.h>
 #include "test_payload_gimbal_emu.h"
 #include "led_button_switch.h"
+#include "communicate.h"
 
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
@@ -171,6 +172,15 @@ void GimbalEmu_ControlSpeed(const T_PsdkGimbalControlSpeedReq *req, T_PsdkGimbal
 			
 				
 				PSDK_LOG_DEBUG("pitchSpeed:%4d  rollSpeed:%4d  yawSpeed:%4d",pitchSpeed,rollSpeed,yawSpeed);
+				USART_TX_BUF[2] = pitchSpeed%256;
+				USART_TX_BUF[3] = pitchSpeed/256;
+				
+				USART_TX_BUF[4] = rollSpeed%256;
+				USART_TX_BUF[5] = rollSpeed/256;
+				
+				USART_TX_BUF[6] = yawSpeed%256;
+				USART_TX_BUF[7] = yawSpeed/256;
+			
     } else {
         pitchSpeed = 0;
         rollSpeed = 0;

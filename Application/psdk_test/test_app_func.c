@@ -53,7 +53,11 @@
 //@formatter:off
 //widget list
 static const T_PsdkAppFuncWidgetListItem s_TestWidgetList[] = {
+#ifdef MOTOR
 APPFUNC_DEF_SWITCH_WIDGET(SWITCH1_INDEX, "Throw"),
+#else
+APPFUNC_DEF_SWITCH_WIDGET(SWITCH1_INDEX, "LED"),
+#endif
 //APPFUNC_DEF_SWITCH_WIDGET(SWITCH2_INDEX, "Blue LED"),
 //    
 //APPFUNC_DEF_BUTTON_WIDGET(BUTTON1_INDEX, "Button_1"),
@@ -204,7 +208,7 @@ E_PsdkStat Test_SetWidgetValueFunc(E_PsdkAppFuncWidgetType widgetType, uint8_t w
 //            }
 //            break;
         case SWITCH1_INDEX:
-            PSDK_LOG_DEBUG("PouTou Swtich ");
+            PSDK_LOG_DEBUG("Swtich ");
             if (pWidgetValue->switchVal == PSDK_APPFUNC_SWITCH_VAL_ON) {
 #ifdef MOTOR
                 Motor_Run_flag = 1;

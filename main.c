@@ -10,6 +10,7 @@
 #include "GUA_Timer1_PWM.h" 
 #include <psdk.h>
 #include "ADC.h"
+#include "communicate.h"
 
 
 
@@ -51,12 +52,10 @@ int main(void)
 	
 	TIM4_init();
 	
-#ifdef MOTOR
 	MotorDriverGPIO_Init();
-#else 
-	GUA_Timer1_PWM_Init(20000);	
-	GUA_Timer1_PWM_Status(GUA_TIMER1_PWM_STATUS_ON);       
-#endif
+	CommunicateUSART_Config();
+//	GUA_Timer1_PWM_Init(20000);	
+//	GUA_Timer1_PWM_Status(GUA_TIMER1_PWM_STATUS_ON);       
 	
 	RCC_GetClocksFreq(&SYSclock);
 	
@@ -79,9 +78,15 @@ int main(void)
 #ifdef MOTOR			
 			PsdkMotorTest();
 #else
+			USART_TX_BUF[0] = 0xa5;
+			USART_TX_BUF[1] = 0x85;
 			PsdkBigLEDTest();
+			USART_TX_BUF[9] = 0x0d;
+			USART_TX_BUF[10] = 0x0a;
+			CommunicateUsart_SendString(Communicate_USARTx,USART_TX_BUF,10);
 #endif
 		}
 	}
 }
+
 

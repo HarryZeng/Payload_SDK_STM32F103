@@ -15,11 +15,11 @@
 .\objects\application.o: .\BSP\dji_typedef.h
 .\objects\application.o: .\BSP\uart.h
 .\objects\application.o: d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include\stm32f10x.h
-.\objects\application.o: d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm3.h
-.\objects\application.o: d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h
-.\objects\application.o: d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h
+.\objects\application.o: d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm3.h
+.\objects\application.o: d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h
+.\objects\application.o: d:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h
 .\objects\application.o: d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include\system_stm32f10x.h
-.\objects\application.o: ..\Payload_SDK_STM32F103_LED\stm32f10x_conf.h
+.\objects\application.o: ..\Payload_SDK_STM32F103\stm32f10x_conf.h
 .\objects\application.o: .\STM32F10x_StdPeriph_Driver\inc\stm32f10x_fsmc.h
 .\objects\application.o: d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include\stm32f10x.h
 .\objects\application.o: .\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h
@@ -45,6 +45,7 @@
 .\objects\application.o: .\BSP\led_button_switch.h
 .\objects\application.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\objects\application.o: .\BSP\sys.h
+.\objects\application.o: .\user\communicate.h
 .\objects\application.o: Application\application.h
 .\objects\application.o: Application\app_infor.h
 .\objects\application.o: .\Application\psdk_test\test_app_func.h
