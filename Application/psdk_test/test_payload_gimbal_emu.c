@@ -185,8 +185,15 @@ void GimbalEmu_ControlSpeed(const T_PsdkGimbalControlSpeedReq *req, T_PsdkGimbal
         pitchSpeed = 0;
         rollSpeed = 0;
         yawSpeed = 0;
+				USART_TX_BUF[2] = 0xdc;
+				USART_TX_BUF[3] = 0x05;
+				
+				USART_TX_BUF[4] = 0xdc;
+				USART_TX_BUF[5] = 0x05;
+				
+				USART_TX_BUF[6] = 0xdc;
+				USART_TX_BUF[7] = 0x05;
     }
-		LED1_T;
 		//PSDK_LOG_DEBUG("pitchSpeed:%4d  rollSpeed:%4d  yawSpeed:%4d",pitchSpeed,rollSpeed,yawSpeed);
 
     ack->ackCode = PSDK_CMD_ACK_CODE_OK;

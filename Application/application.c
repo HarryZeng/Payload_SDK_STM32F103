@@ -339,7 +339,7 @@ void application_init(void)
 {
     //device init
     LED_Init();
-    LED_Control(LED1_GREEN, LED_OPT_OFF);
+    //LED_Control(LED1_GREEN, LED_OPT_OFF);
 	
     LOG_Init();
 

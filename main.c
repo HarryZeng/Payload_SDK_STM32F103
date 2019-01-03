@@ -54,9 +54,7 @@ int main(void)
 	
 	MotorDriverGPIO_Init();
 	CommunicateUSART_Config();
-//	GUA_Timer1_PWM_Init(20000);	
-//	GUA_Timer1_PWM_Status(GUA_TIMER1_PWM_STATUS_ON);       
-	
+
 	RCC_GetClocksFreq(&SYSclock);
 	
 	LOG("BSP init successfully-!\r\n");
@@ -78,6 +76,7 @@ int main(void)
 #ifdef MOTOR			
 			PsdkMotorTest();
 #else
+			
 			USART_TX_BUF[0] = 0xa5;
 			USART_TX_BUF[1] = 0x85;
 			PsdkBigLEDTest();
